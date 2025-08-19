@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+* {
+  font-family: Outfit;
+}
+
+
+
+.active hr {
+  @apply block;
+}
+
+
+@media (max-width:740px) {
+  .active p{
+    @apply text-white bg-zinc-300
+  }
+}
+
+.bg-primary {
+background: linear-gradient(
+  135deg,
+  #a8e063,
+  #8bc34a,
+  #56ab2f,
+  #3baA5d,
+  #2f8749
+);
+}
+
+
+
+/* .bg-btn{
+  background-color: #;
+} */
+
+.grid-cols-auto {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+/* In your global CSS */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
