@@ -83,16 +83,16 @@ const MyAppointments = () => {
               </p>
             </div>
             <div className="sm:relative min-h-[40px] sm:min-h-0 sm:w-50">
-              <div className="sm:absolute bottom-4 right-4 flex flex-col gap-2 w-full sm:w-[90%] mt-4 sm:mt-0">
+              <div className="sm:relative flex flex-col justify-between gap-2 w-full sm:w-[90%] md:mt-8 sm:mt-0">
 
                 {!item.cancelled && item.payment && !item.isCompleted && (
-                  <button className="border border-red-500 rounded-md text-red-500 px-2 py-1">
+                  <button className="border w-[200px] border-red-500 rounded-md text-red-500 px-2 py-1">
                     Fees Paid
                   </button>
                 )}
 
                 {!item.cancelled && !item.payment && !item.isCompleted && (
-                  <button className="bg-lime-600 text-white px-2 py-1 rounded hover:bg-blue-600 transition">
+                  <button className="bg-lime-600 w-[200px] text-white px-2 py-1 rounded hover:bg-blue-600 transition">
                     Pay Online
                   </button>
                 )}
@@ -100,19 +100,19 @@ const MyAppointments = () => {
                 {!item.cancelled && !item.isCompleted && (
                   <button
                     onClick={() => cancelAppointment(item._id)}
-                    className="bg-lime-600 text-white px-2 py-1 rounded hover:bg-red-600 transition"
+                    className="bg-lime-600 w-[200px] text-white px-2 py-1 rounded hover:bg-red-600 transition"
                   >Cancel Appointment
                   </button>
                 )}
 
                 {item.cancelled && !item.isCompleted && (
-                  <button className="border border-red-500 rounded-md text-red-500 px-2 py-1">
+                  <button className="border w-[200px] border-red-500 rounded-md text-red-500 px-2 py-1">
                     Cancelled
                   </button>
                 )}
 
                 {item.isCompleted && (
-                  <button className="border border-green-500 rounded-md text-green-500 px-2 py-1">
+                  <button className="border w-[200px] border-green-500 rounded-md text-green-500 px-2 py-1">
                     Completed
                   </button>
                 )}

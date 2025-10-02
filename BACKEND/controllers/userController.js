@@ -15,7 +15,8 @@ const registerUser = async (req, res) => {
         if (!name || !password || !email) {
             return res.json({ success: false, message: 'missing Details' })
         }
-
+        console.log("working");
+        
         if (!validator.isEmail(email)) {
             return res.json({ success: false, message: 'enter valid email' })
         }
